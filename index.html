@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/styles.css" rel="stylesheet" type="text/css" media="all">
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Conway's Game of Life</title>
+  </head>
+  <body>
+
+   
+
+    <div class="container">
+
+      <!-- HEADER -->
+      <h1 class="center">Your Game of Life</h1>
+      <hr>
+
+      
+      <!-- GAME INTERFACE -->
+      <div class="row">
+        <span id="play-button">
+          <button id="play" class="btn btn-primary">Play</button>
+        </span>
+        <!-- <span class="speed-buttons">
+          <button id="decrease-speed" class="btn btn-info hiding">&lsaquo;&lsaquo;</button>
+          <button id="increase-speed" class="btn btn-info hiding">&rsaquo;&rsaquo;</button>
+        </span> -->
+        <span class="space">&nbsp;</span>
+        <span id="pause-button">
+          <button id="pause" class="btn btn-primary">Pause</button>
+        </span>
+        <span class="space">&nbsp;</span>
+        <span id="step-button">
+          <button id="step" class="btn btn-primary">Step</button>
+        </span>
+        <span class="space">&nbsp;</span>
+        <button id="reset" class="btn btn-primary">Reset</button>
+      </div>
+        <div>
+          <input type="number" class="textboxclass" value="2" id="n1"/> to <input type="number" class="textboxclass" value="3" id="n11"/> Neighbors needed for survival (Conway = 2 to 3)
+          <br />
+          <input type="number" class="textboxclass" value="2" id="n2"/> Death by underpopulation threashold (Conway = 2 )
+          <br />
+          <input type="number" class="textboxclass" value="3" id="n3"/> Death by overcrowding threashold (Conway = 3)
+          <br />
+          <input type="number" class="textboxclass" value="3" id="n4"/> Neighbors needed for reproduction (Conway = 3) 
+        </div>
+      <div class="row speed-slider">
+        <label for="speed">Fast</label>
+        <input id="speed" type="range" min="100" max="1000" value = "400" step="100">
+        <label for="speed">Slow</label>
+      </div>
+      <table id="game-grid" class="pad-bottom"></table>
+
+      <!-- GAME COUNTER -->
+      <div class="row hiding">
+        <div class="col-4 pad-left">
+          Generations:
+          <div class="row">
+            <div class="col-12">
+              <span id="generation-counter"></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          Population:
+          <div class="row">
+            <div class="col-12">
+              <span id="population"></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          Population Max:
+          <div class="row">
+            <div class="col-12">
+              <span id="population-max"></span> at generation <span id="generation-max"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    Forked by <a href="github.com/blueintegral">Hunter Scott</a> from <a href="https://github.com/steelerose/game_of_life_javascript">steelerose</a>
+     
+
+  </body>
+</html>
